@@ -76,7 +76,9 @@
                         <networkBridgeFilterFactory>
                             <conditionalNetworkBridgeFilterFactory replayWhenNoConsumers="true" replayDelay="500" />
                         </networkBridgeFilterFactory>
-                        <deadLetterStrategy queuePrefix="" queueSuffix=".DLQ" useQueueForQueueMessages="true" expiration="20000"/>
+                        <deadLetterStrategy>
+                            <sharedDeadLetterStrategy queuePrefix="" queueSuffix=".DLQ" useQueueForQueueMessages="true" expiration="20000"/>
+                        </deadLetterStrategy>
                     </policyEntry>
                     <policyEntry topic=">" producerFlowControl="true">
                         <!--
