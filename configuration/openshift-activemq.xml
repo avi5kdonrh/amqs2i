@@ -176,17 +176,10 @@
             <authorizationMap>
               <authorizationEntries>
                 <authorizationEntry queue=">"
-                                    read="admins"
-                                    write="admins"
-                                    admin="admins" />
-                <authorizationEntry queue="store.>"
-                                    read="amq-read"
-                                    write="amq-write"
-                                    admin="admins,amq-read,amq-write" />
-                <authorizationEntry queue="*.store.>"
-                                    read="amq-read"
-                                    write="amq-write"
-                                    admin="admins,amq-read,amq-write" />
+                                    read="admins,amq-read,amq-write,amq,admin"
+                                    write="admins,amq-read,amq-write,amq,admin"
+                                    admin="admins,amq-read,amq-write,amq,admin"  />
+              
                 <authorizationEntry topic=">"
                                     read="admins,amq-read,amq-write"
                                     write="admins,amq-read,amq-write"
